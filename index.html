@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="OFWALL coffee and space, cafe minimalis di Kuranji, Padang untuk ngopi, nugas, ngobrol, dan menikmati waktu santai."
+    />
+    <title>OFWALL | Coffee and Space</title>
+    <link rel="icon" type="image/jpeg" href="assets/brand/logo-ofwall.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#11110F",
+              charcoal: "#1E1E1A",
+              paper: "#F6F3EC",
+              porcelain: "#FFFDF8",
+              mist: "#E7EDE6",
+              sage: "#65765E",
+              rust: "#B45E3D",
+              brass: "#C89452",
+              muted: "#6C6A61",
+            },
+            boxShadow: {
+              soft: "0 22px 60px rgba(17, 17, 15, 0.12)",
+              lift: "0 28px 90px rgba(17, 17, 15, 0.22)",
+              line: "inset 0 0 0 1px rgba(17, 17, 15, 0.09)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      ::selection {
+        background: #11110f;
+        color: #f6f3ec;
+      }
+
+      section {
+        scroll-margin-top: 92px;
+      }
+
+      .grain {
+        background-image:
+          radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px),
+          linear-gradient(rgba(17, 17, 15, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(17, 17, 15, 0.045) 1px, transparent 1px);
+        background-size: 18px 18px, 54px 54px, 54px 54px;
+      }
+
+      .hero-photo {
+        background-image:
+          linear-gradient(90deg, rgba(17, 17, 15, 0.92), rgba(17, 17, 15, 0.64) 46%, rgba(17, 17, 15, 0.18)),
+          linear-gradient(180deg, rgba(17, 17, 15, 0.06), rgba(17, 17, 15, 0.86)),
+          url("assets/hero/space-night.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .ticker {
+        animation: ticker 22s linear infinite;
+      }
+
+      @keyframes ticker {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .menu-card img,
+      .doc-card img {
+        transition: transform 0.45s ease;
+      }
+
+      .menu-card:hover img,
+      .doc-card:hover img {
+        transform: scale(1.055);
+      }
+
+      .doc-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .doc-card-img-wrapper {
+        overflow: hidden;
+        flex: 1 1 0%;
+        min-height: 0;
+      }
+
+      .archive-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      @media (min-width: 768px) {
+        .archive-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .archive-grid figure:nth-child(1) {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-paper text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-ink/10 bg-porcelain/95 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#home" class="flex min-w-0 items-center gap-3" aria-label="OFWALL home">
+          <img
+            src="assets/brand/logo-ofwall.jpg"
+            alt="Logo OFWALL coffee and space"
+            class="h-11 w-11 rounded-lg border border-ink/10 bg-white object-cover"
+          />
+          <span class="min-w-0">
+            <span class="block text-lg font-black tracking-wide">OFWALL</span>
+            <span class="block text-[11px] uppercase tracking-[0.24em] text-muted">coffee and space</span>
+          </span>
+        </a>
+
+        <nav class="hidden items-center gap-7 text-sm font-bold text-muted md:flex">
+          <a href="#tentang" class="transition hover:text-ink">Tentang</a>
+          <a href="#katalog" class="transition hover:text-ink">Katalog</a>
+          <a href="#dokumentasi" class="transition hover:text-ink">Dokumentasi</a>
+          <a href="#lokasi" class="transition hover:text-ink">Lokasi</a>
+        </nav>
+
+        <a
+          href="https://www.instagram.com/ofwallcoffee/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full bg-ink px-5 py-2.5 text-sm font-black text-white transition hover:bg-sage"
+        >
+          Instagram
+        </a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero-photo relative overflow-hidden bg-ink text-white">
+        <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-14">
+          <div class="max-w-4xl">
+            <p class="inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-3 text-xs font-black uppercase tracking-[0.24em] text-white/80 backdrop-blur">
+              Coffee and space - Kuranji, Padang
+            </p>
+            <h1 class="mt-6 text-6xl font-black leading-[0.9] sm:text-8xl lg:text-[8.25rem]">
+              OFWALL
+            </h1>
+            <p class="mt-5 max-w-2xl text-2xl font-black leading-tight text-white sm:text-3xl">
+              Tempat ngopi yang tenang, hangat, dan tetap hidup sampai malam.
+            </p>
+            <p class="mt-5 max-w-2xl text-base leading-8 text-white/70">
+              Datang untuk kopi, minuman segar, snack ringan, atau ruang santai buat nugas, ngobrol, dan berhenti
+              sebentar dari hari yang penuh.
+            </p>
+
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#katalog"
+                class="rounded-full bg-white px-6 py-3 text-center text-sm font-black text-ink transition hover:bg-mist"
+              >
+                Lihat Katalog
+              </a>
+              <a
+                href="https://maps.app.goo.gl/oyyUNekxLgs5ejjp7"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rounded-full border border-white/25 bg-white/10 px-6 py-3 text-center text-sm font-black text-white backdrop-blur transition hover:bg-white/20"
+              >
+                Buka Maps
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="overflow-hidden border-b border-ink/10 bg-ink py-3 text-white">
+        <div class="ticker flex w-[200%] gap-6 whitespace-nowrap text-xs font-black uppercase tracking-[0.28em] text-white/70">
+          <span>OFWALL coffee and space</span>
+          <span>Padang</span>
+          <span>Open 10.00 - 02.00</span>
+          <span>Ngopi</span>
+          <span>Nugas</span>
+          <span>Ngobrol</span>
+          <span>Slow moments</span>
+          <span>OFWALL coffee and space</span>
+          <span>Padang</span>
+          <span>Open 10.00 - 02.00</span>
+          <span>Ngopi</span>
+          <span>Nugas</span>
+          <span>Ngobrol</span>
+          <span>Slow moments</span>
+        </div>
+      </section>
+
+      <section class="border-b border-ink/10 bg-paper">
+        <div class="mx-auto grid max-w-7xl gap-3 px-4 py-5 sm:grid-cols-2 sm:px-6 lg:grid-cols-[1fr_1fr_1fr_1.2fr] lg:px-8">
+          <article class="rounded-lg border border-ink/10 bg-white p-5 shadow-line">
+            <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Open Daily</p>
+            <p class="mt-3 text-2xl font-black">10.00 - 02.00</p>
+          </article>
+          <article class="rounded-lg border border-ink/10 bg-white p-5 shadow-line">
+            <p class="text-xs font-black uppercase tracking-[0.22em] text-sage">Area</p>
+            <p class="mt-3 text-2xl font-black">Kuranji</p>
+          </article>
+          <article class="rounded-lg border border-ink/10 bg-white p-5 shadow-line">
+            <p class="text-xs font-black uppercase tracking-[0.22em] text-brass">Mood</p>
+            <p class="mt-3 text-2xl font-black">Slow, warm, easy</p>
+          </article>
+          <article class="rounded-lg bg-rust p-5 text-white shadow-soft">
+            <p class="text-xs font-black uppercase tracking-[0.22em] text-white/70">Signature</p>
+            <p class="mt-3 text-2xl font-black">Coffee, tea, yakult series</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="tentang" class="grain py-20 sm:py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.28em] text-rust">01 / Tentang</p>
+            <h2 class="mt-4 max-w-xl text-3xl font-black leading-tight sm:text-5xl">
+              Minimalis, tapi bukan kosong. OFWALL dibuat untuk singgah dengan nyaman.
+            </h2>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-muted">
+              OFWALL adalah coffee and space dengan suasana clean, hangat, dan tidak berlebihan. Tempatnya cocok untuk
+              obrolan santai, kerja ringan, nugas, atau menikmati minuman tanpa buru-buru.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <figure class="overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft sm:row-span-2">
+              <img
+                src="assets/documentation/doc-01.jpg"
+                alt="Suasana ruang OFWALL"
+                class="h-full min-h-[420px] w-full object-cover"
+                loading="lazy"
+              />
+            </figure>
+            <article class="rounded-lg bg-sage p-6 text-white shadow-soft">
+              <p class="text-xs font-black uppercase tracking-[0.24em] text-white/70">Comfort Space</p>
+              <p class="mt-4 text-2xl font-black">Ruang santai untuk ngobrol, nugas, dan duduk lebih lama.</p>
+            </article>
+            <figure class="overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <img
+                src="assets/documentation/doc-10.jpg"
+                alt="Area bar OFWALL"
+                class="h-72 w-full object-cover"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-charcoal py-20 text-white sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <div>
+              <p class="text-sm font-black uppercase tracking-[0.28em] text-brass">Promote Minuman</p>
+              <h2 class="mt-4 text-3xl font-black leading-tight sm:text-5xl">
+                Pilihan minuman yang paling gampang jadi alasan mampir.
+              </h2>
+            </div>
+            <p class="max-w-2xl leading-8 text-white/70 lg:ml-auto">
+              Bagian ini dibuat fokus untuk promosi minuman. Nama menu mengikuti aset yang sudah dirapikan supaya foto
+              dan katalog tidak tertukar.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-4 md:grid-cols-3">
+            <article class="menu-card group overflow-hidden rounded-lg bg-white text-ink shadow-lift">
+              <div class="overflow-hidden">
+                <img
+                  src="assets/menu/drinks/kopi-susu.jpg"
+                  alt="Kopi Susu OFWALL"
+                  class="h-72 w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <p class="text-xs font-black uppercase tracking-[0.24em] text-rust">Coffee</p>
+                <h3 class="mt-3 text-2xl font-black">Kopi Susu</h3>
+                <p class="mt-3 text-sm leading-6 text-muted">Creamy, ringan, dan cocok untuk mulai duduk santai.</p>
+              </div>
+            </article>
+
+            <article class="menu-card group overflow-hidden rounded-lg bg-mist text-ink shadow-lift md:translate-y-8">
+              <div class="overflow-hidden">
+                <img
+                  src="assets/menu/drinks/yakult-strawberry.jpg"
+                  alt="Yakult Strawberry OFWALL"
+                  class="h-72 w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <p class="text-xs font-black uppercase tracking-[0.24em] text-rust">Yakult Series</p>
+                <h3 class="mt-3 text-2xl font-black">Yakult Strawberry</h3>
+                <p class="mt-3 text-sm leading-6 text-muted">Segar, manis, dan enak untuk pilihan non-coffee.</p>
+              </div>
+            </article>
+
+            <article class="menu-card group overflow-hidden rounded-lg bg-rust text-white shadow-lift">
+              <div class="overflow-hidden">
+                <img
+                  src="assets/menu/drinks/caramel-macchiato.jpg"
+                  alt="Caramel Macchiato OFWALL"
+                  class="h-72 w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-6">
+                <p class="text-xs font-black uppercase tracking-[0.24em] text-white/70">Coffee</p>
+                <h3 class="mt-3 text-2xl font-black">Caramel Macchiato</h3>
+                <p class="mt-3 text-sm leading-6 text-white/75">Kopi lembut dengan rasa caramel yang lebih manis.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="katalog" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <p class="text-sm font-black uppercase tracking-[0.28em] text-rust">02 / Katalog</p>
+              <h2 class="mt-4 text-3xl font-black sm:text-5xl">Katalog OFWALL</h2>
+              <p class="mt-4 max-w-2xl leading-8 text-muted">
+                Katalog memakai semua aset menu yang sudah dirapikan. Menu board resmi bisa dibuka, diperbesar, atau
+                diunduh dalam bentuk PDF.
+              </p>
+            </div>
+            <p class="rounded-full border border-ink/10 bg-white px-5 py-3 text-sm font-black text-muted shadow-line">
+              Menu PDF tersedia
+            </p>
+          </div>
+
+          <div class="mt-10">
+            <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+              <div>
+                <p class="text-sm font-black uppercase tracking-[0.28em] text-rust">Menu</p>
+                <h3 class="mt-3 text-3xl font-black sm:text-5xl">Menu Favorit OFWALL</h3>
+                <p class="mt-4 max-w-2xl leading-8 text-muted">
+                  Ringkasan menu dibuat seperti daftar praktis. Untuk detail paling lengkap, buka PDF atau foto menu
+                  board di bawah.
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-3 sm:flex-row lg:justify-end">
+                <a
+                  href="assets/menu/ofwall-menu.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full bg-ink px-6 py-3 text-center text-sm font-black text-white transition hover:bg-sage"
+                >
+                  Buka Menu PDF
+                </a>
+                <a
+                  href="assets/menu/ofwall-menu.pdf"
+                  download="ofwall-menu.pdf"
+                  class="rounded-full border border-ink/20 bg-white px-6 py-3 text-center text-sm font-black text-ink transition hover:border-ink"
+                >
+                  Download PDF
+                </a>
+                <a
+                  href="assets/menu/menu-board.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full border border-ink/20 bg-white px-6 py-3 text-center text-sm font-black text-ink transition hover:border-ink"
+                >
+                  Buka Foto Menu
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-3 rounded-lg border border-ink/10 bg-white p-5 shadow-line lg:flex-row lg:items-center lg:justify-between">
+              <p class="font-bold leading-7 text-muted">
+                Harga mengikuti menu board resmi OFWALL. Untuk update terbaru, cek langsung melalui Instagram.
+              </p>
+              <p class="rounded-full bg-rust px-5 py-3 text-center text-xs font-black uppercase tracking-[0.24em] text-white">
+                Coffee - Tea - Snack
+              </p>
+            </div>
+
+            <div class="mt-8 grid gap-5 lg:grid-cols-3">
+              <article class="rounded-lg border border-rust/40 bg-white p-5 shadow-line">
+                <div class="rounded-lg bg-rust px-5 py-4 text-white">
+                  <h4 class="text-2xl font-black">Coffee</h4>
+                  <p class="mt-1 text-sm text-white/75">Pilihan kopi favorit untuk duduk santai.</p>
+                </div>
+                <ul class="mt-4 divide-y divide-ink/10">
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Kopi Susu</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">12k-15k</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Caramel Macchiato</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">15k</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="rounded-lg border border-sage/40 bg-white p-5 shadow-line">
+                <div class="rounded-lg bg-sage px-5 py-4 text-white">
+                  <h4 class="text-2xl font-black">Tea Series</h4>
+                  <p class="mt-1 text-sm text-white/75">Segar dan ringan untuk pilihan non-coffee.</p>
+                </div>
+                <ul class="mt-4 divide-y divide-ink/10">
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Lychee Tea</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">15k</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Lemon Tea</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">15k</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Thai Tea</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">15k</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="rounded-lg border border-rust/40 bg-white p-5 shadow-line">
+                <div class="rounded-lg bg-rust px-5 py-4 text-white">
+                  <h4 class="text-2xl font-black">Yakult Series</h4>
+                  <p class="mt-1 text-sm text-white/75">Manis, fresh, dan mudah dinikmati.</p>
+                </div>
+                <ul class="mt-4 divide-y divide-ink/10">
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Yakult Strawberry</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">18k</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Yakult Lychee</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">18k</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="rounded-lg border border-sage/40 bg-white p-5 shadow-line">
+                <div class="rounded-lg bg-sage px-5 py-4 text-white">
+                  <h4 class="text-2xl font-black">Non Coffee</h4>
+                  <p class="mt-1 text-sm text-white/75">Creamy dan nyaman untuk teman ngobrol.</p>
+                </div>
+                <ul class="mt-4 divide-y divide-ink/10">
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Choco Wall</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">15k</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 py-3">
+                    <span class="font-black">Cookies and Cream</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">15k</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="rounded-lg border border-rust/40 bg-white p-5 shadow-line lg:col-span-2">
+                <div class="rounded-lg bg-rust px-5 py-4 text-white">
+                  <h4 class="text-2xl font-black">Food & Snack</h4>
+                  <p class="mt-1 text-sm text-white/75">Teman ngemil dan nugas.</p>
+                </div>
+                <ul class="mt-4 grid divide-y divide-ink/10 sm:grid-cols-3 sm:divide-y-0 sm:divide-x">
+                  <li class="flex items-center justify-between gap-4 py-3 sm:px-4">
+                    <span class="font-black">Kentang Goreng</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">15k</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 py-3 sm:px-4">
+                    <span class="font-black">Mie Rebus</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">11k</span>
+                  </li>
+                  <li class="flex items-center justify-between gap-4 py-3 sm:px-4">
+                    <span class="font-black">Mie Goreng</span>
+                    <span class="rounded-full bg-paper px-3 py-1 text-sm font-black text-rust">11k</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="mt-8 grid gap-5 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
+              <article class="rounded-lg bg-ink p-6 text-white shadow-soft">
+                <p class="text-xs font-black uppercase tracking-[0.24em] text-brass">Menu Board</p>
+                <h4 class="mt-4 text-3xl font-black leading-tight">Preview foto menu yang lebih jelas.</h4>
+                <p class="mt-4 leading-7 text-white/70">
+                  Foto menu ditampilkan penuh tanpa crop. Klik foto untuk membuka ukuran asli, atau gunakan PDF untuk
+                  disimpan.
+                </p>
+                <a
+                  href="assets/menu/menu-board.jpg"
+                  download="ofwall-menu-board.jpg"
+                  class="mt-8 inline-flex rounded-full bg-white px-6 py-3 text-sm font-black text-ink transition hover:bg-mist"
+                >
+                  Download Foto Menu
+                </a>
+              </article>
+
+              <figure class="overflow-hidden rounded-lg border border-ink/10 bg-white p-3 shadow-soft">
+                <a href="assets/menu/menu-board.jpg" target="_blank" rel="noopener noreferrer" aria-label="Buka foto menu board OFWALL">
+                  <img
+                    src="assets/menu/menu-board.jpg"
+                    alt="Foto menu board OFWALL"
+                    class="max-h-[620px] w-full object-contain"
+                    loading="lazy"
+                  />
+                </a>
+              </figure>
+            </div>
+          </div>
+
+          <div class="mt-10 grid gap-5 lg:grid-cols-3">
+            <article class="rounded-lg bg-ink p-6 text-white shadow-soft">
+              <p class="text-xs font-black uppercase tracking-[0.24em] text-rust">Food / Snack</p>
+              <h3 class="mt-4 text-3xl font-black">Teman ngobrol yang simple.</h3>
+              <p class="mt-4 leading-7 text-white/70">
+                Pilihan makanan ringan untuk menemani kopi, teh, dan sesi duduk santai.
+              </p>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img
+                  src="assets/menu/food/kentang-goreng.jpg"
+                  alt="Kentang Goreng OFWALL"
+                  class="h-56 w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Snack</p>
+                <h3 class="mt-3 text-xl font-black">Kentang Goreng</h3>
+                <p class="mt-2 text-sm leading-6 text-muted">Snack klasik yang cocok jadi teman ngobrol santai.</p>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img
+                  src="assets/menu/food/mie-rebus.jpg"
+                  alt="Mie Rebus OFWALL"
+                  class="h-56 w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Food</p>
+                <h3 class="mt-3 text-xl font-black">Mie Rebus</h3>
+                <p class="mt-2 text-sm leading-6 text-muted">Menu hangat sederhana yang pas dinikmati saat santai.</p>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft lg:col-start-2">
+              <div class="overflow-hidden">
+                <img
+                  src="assets/menu/food/mie-goreng.jpg"
+                  alt="Mie Goreng OFWALL"
+                  class="h-56 w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Food</p>
+                <h3 class="mt-3 text-xl font-black">Mie Goreng</h3>
+                <p class="mt-2 text-sm leading-6 text-muted">Pilihan mie gurih untuk teman nongkrong.</p>
+                <p class="mt-4 font-black">Rp --</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-lg bg-sage p-6 text-white shadow-soft lg:col-span-2">
+              <p class="text-xs font-black uppercase tracking-[0.24em] text-white/70">Drink Catalog</p>
+              <h3 class="mt-4 text-3xl font-black">Coffee, tea, yakult, dan non-coffee.</h3>
+              <p class="mt-4 max-w-xl leading-7 text-white/75">
+                Semua foto minuman dimasukkan ke katalog agar halaman terasa lengkap dan tetap rapi.
+              </p>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/kopi-susu.jpg" alt="Kopi Susu OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Coffee</p>
+                <h3 class="mt-3 text-xl font-black">Kopi Susu</h3>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/caramel-macchiato.jpg" alt="Caramel Macchiato OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Coffee</p>
+                <h3 class="mt-3 text-xl font-black">Caramel Macchiato</h3>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/yakult-strawberry.jpg" alt="Yakult Strawberry OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Yakult Series</p>
+                <h3 class="mt-3 text-xl font-black">Yakult Strawberry</h3>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/lychee-tea.jpg" alt="Lychee Tea OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Tea Series</p>
+                <h3 class="mt-3 text-xl font-black">Lychee Tea</h3>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/lemon-tea.jpg" alt="Lemon Tea OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Tea Series</p>
+                <h3 class="mt-3 text-xl font-black">Lemon Tea</h3>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/choco-wall.jpg" alt="Choco Wall OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Non Coffee</p>
+                <h3 class="mt-3 text-xl font-black">Choco Wall</h3>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/yakult-lychee.jpg" alt="Yakult Lychee OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Yakult Series</p>
+                <h3 class="mt-3 text-xl font-black">Yakult Lychee</h3>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/thai-tea.jpg" alt="Thai Tea OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Tea Series</p>
+                <h3 class="mt-3 text-xl font-black">Thai Tea</h3>
+              </div>
+            </article>
+
+            <article class="menu-card overflow-hidden rounded-lg border border-ink/10 bg-white shadow-soft">
+              <div class="overflow-hidden">
+                <img src="assets/menu/drinks/cookies-and-cream.jpg" alt="Cookies and Cream OFWALL" class="h-56 w-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-5">
+                <p class="text-xs font-black uppercase tracking-[0.22em] text-rust">Non Coffee</p>
+                <h3 class="mt-3 text-xl font-black">Cookies and Cream</h3>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="dokumentasi" class="bg-mist py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-5 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+            <div>
+              <p class="text-sm font-black uppercase tracking-[0.28em] text-rust">03 / Dokumentasi</p>
+              <h2 class="mt-4 text-3xl font-black sm:text-5xl">Dokumentasi OFWALL</h2>
+            </div>
+            <p class="leading-8 text-muted">
+              Rekam jejak setiap momen santai, seduhan kopi presisi, dan tawa hangat yang mengalir di setiap sudut OFWALL.
+            </p>
+          </div>
+
+          <div class="archive-grid mt-10">
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-soft">
+              <div class="doc-card-img-wrapper">
+                <img src="assets/documentation/doc-01.jpg" alt="Dokumentasi suasana OFWALL 01" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Sudut Ruang</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Hangatnya obrolan di sudut bar</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-02.jpg" alt="Dokumentasi suasana OFWALL 02" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Fasad</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Suasana malam yang teduh dan santai</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-03.jpg" alt="Dokumentasi signage OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Identitas</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Penanda sederhana ruang bercerita</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-04.jpg" alt="Dokumentasi bar OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Sudut Bar</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Dedikasi di balik setiap cangkir kopi</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-05.jpg" alt="Dokumentasi pengunjung OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Komunitas</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Tempat ide dan tawa hangat berpadu</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-06.jpg" alt="Dokumentasi interior OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Ruang Kerja</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Sudut tenang untuk fokus dan nugas</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-07.jpg" alt="Dokumentasi area duduk OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Area Duduk</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Ruang komunal yang ramah dan terbuka</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-08.jpg" alt="Dokumentasi signage malam OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Identitas</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Menyala lembut menyambut malam</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-09.jpg" alt="Dokumentasi produk OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Segelas Rasa</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Kesegaran buah pelepas dahaga sore</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-10.jpg" alt="Dokumentasi barista OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Barista</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Racikan presisi dengan penuh ketelitian</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-11.jpg" alt="Dokumentasi kopi OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Kopi</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Aroma kopi susu yang menenangkan</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-18.jpg" alt="Dokumentasi minuman OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Non-Kopi</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Segarnya perpaduan manis Yakult Lychee</span>
+              </figcaption>
+            </figure>
+            <figure class="doc-card overflow-hidden rounded-lg bg-white shadow-line">
+              <div class="doc-card-img-wrapper aspect-[4/5]">
+                <img src="assets/documentation/doc-20.jpg" alt="Dokumentasi minuman OFWALL" class="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <figcaption class="p-4 bg-white border-t border-ink/5">
+                <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-rust">Matcha</span>
+                <span class="block mt-1 text-xs font-bold text-ink">Segarnya Matcha Latte dingin di sore hari</span>
+              </figcaption>
+            </figure>
+
+
+          </div>
+        </div>
+      </section>
+
+      <section id="lokasi" class="py-20 sm:py-24">
+        <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.28em] text-rust">04 / Lokasi</p>
+            <h2 class="mt-4 text-3xl font-black sm:text-5xl">Lokasi & Jam Operasional</h2>
+            <p class="mt-5 leading-8 text-muted">
+              Datang buat ngopi, nugas, ngobrol, atau ambil jeda dari hari yang padat. OFWALL buka sampai malam, jadi
+              bisa jadi tempat singgah setelah aktivitas.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-[0.82fr_1.18fr]">
+            <figure class="overflow-hidden rounded-lg shadow-soft">
+              <img
+                src="assets/documentation/doc-08.jpg"
+                alt="Signage malam OFWALL"
+                class="h-full min-h-[340px] w-full object-cover"
+                loading="lazy"
+              />
+            </figure>
+            <article class="rounded-lg bg-white p-6 shadow-soft">
+              <dl class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <dt class="text-xs font-black uppercase tracking-[0.22em] text-rust">Jam buka</dt>
+                  <dd class="mt-2 text-xl font-black">10.00 - 02.00</dd>
+                </div>
+                <div>
+                  <dt class="text-xs font-black uppercase tracking-[0.22em] text-rust">Instagram</dt>
+                  <dd class="mt-2 font-black">@ofwallcoffee</dd>
+                </div>
+                <div class="sm:col-span-2">
+                  <dt class="text-xs font-black uppercase tracking-[0.22em] text-rust">Alamat</dt>
+                  <dd class="mt-2 leading-7 text-muted">
+                    Jl. Markisa Raya Perumnas, Kuranji, Kec. Kuranji, Kota Padang, Sumatera Barat 25157
+                  </dd>
+                </div>
+              </dl>
+
+              <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                <a
+                  href="https://maps.app.goo.gl/oyyUNekxLgs5ejjp7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full bg-ink px-6 py-3 text-center text-sm font-black text-white transition hover:bg-sage"
+                >
+                  Lihat Google Maps
+                </a>
+                <a
+                  href="https://www.instagram.com/ofwallcoffee/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full border border-ink/20 px-6 py-3 text-center text-sm font-black text-ink transition hover:border-ink hover:bg-mist"
+                >
+                  Kunjungi Instagram
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-ink px-4 py-16 text-white sm:px-6 lg:px-8">
+        <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.28em] text-brass">Coffee, space, slow moments</p>
+            <h2 class="mt-4 max-w-3xl text-3xl font-black leading-tight sm:text-5xl">
+              Kalau butuh tempat yang tidak berisik tapi tetap punya suasana, OFWALL bisa jadi tujuan.
+            </h2>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <img
+              src="assets/menu/drinks/lychee-tea.jpg"
+              alt="Lychee Tea OFWALL"
+              class="h-52 w-full rounded-lg object-cover shadow-lift"
+              loading="lazy"
+            />
+            <img
+              src="assets/menu/food/kentang-goreng.jpg"
+              alt="Kentang Goreng OFWALL"
+              class="h-52 w-full rounded-lg object-cover shadow-lift"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-charcoal py-10 text-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div class="flex items-center gap-3">
+          <img
+            src="assets/brand/logo-ofwall.jpg"
+            alt="Logo OFWALL coffee and space"
+            class="h-12 w-12 rounded-lg bg-paper object-cover"
+            loading="lazy"
+          />
+          <div>
+            <p class="text-lg font-black">OFWALL</p>
+            <p class="text-xs uppercase tracking-[0.28em] text-white/60">coffee and space</p>
+          </div>
+        </div>
+        <p class="text-sm text-white/60">&copy; 2026 OFWALL. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
